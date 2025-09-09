@@ -28,5 +28,6 @@ Pythonコードサンプル
 - `/data/`:3.3.2_MITRE ATT&CK Cloud Matrixと総務省及びデジタル庁ガイドラインと意味類似度を探索し対策の成熟度をスコア化するPythonコード.docx
 - `/data/`:4.4 SPRV方式を可視化するための３つのパラメータ.docx
 - `/data/`:4.4_SPRV数式と他方式比較による妥当性検証.docx 
+- `/data/`:自治体ゼロトラスト環境モデル_20250821.pptx
 - `README-ja.md`: 本ファイル
 
