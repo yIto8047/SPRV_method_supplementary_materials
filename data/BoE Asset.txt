@@ -1,0 +1,20 @@
+"notePC Koumu anywhere for Teacher",
+    "DeskTop koumu OnPremise for Teacher",
+Google chrome book for GIGA terminal
+Apple iPad for GIGA terminal
+Windows Surface for GIGA terminal
+    "File Server OnPremise",
+    "Cloud Storage",
+    "AD OnPremise",
+    "iDaaS",
+    "Firewall",
+    "Wi-fi AP",
+    "Web Server OnPremise",
+    "Proxy Server OnPremise",
+    "Mail Server OnPremise",
+    "M365 education",
+     Google Education
+    "Koumu Server OnPremise",
+    "Koumu Server OnCloud",
+Gakushu Server OnPremise
+Gakushu Server OnCloud

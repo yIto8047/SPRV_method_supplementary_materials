@@ -1,0 +1,26 @@
+1.電子カルテシステム（EHR）／ Electronic Health Record System
+
+2.医事会計システム ／ Medical Billing System
+
+3.PACS ／ Picture Archiving and Communication System
+
+4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System
+
+5.クライアント端末（PC・タブレット）／ Client Terminals (PCs/Tablets)
+
+6.ネットワーク機器（ルーター・スイッチ）／ Network Devices
+
+7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices
+
+基本、すべてオンプレミスを前提にする。
+
+以下はメモ
+
+| ① 情報資産（Information Assets） | 主に含まれる②システム（Application Assets） | 補足                      |
+| -------------------------- | ------------------------------- | ----------------------- |
+| **診療記録（EHRデータ）**           | 電子カルテシステム（EHR）                  | 医師記録・看護記録・SOAPなど        |
+| **患者基本情報データベース**           | 電子カルテシステム（EHR）<br>医事会計システム      | マスタ患者情報はEHR、請求用コピーは会計側  |
+| **検査結果データ**                | 電子カルテシステム（EHR）                  | 検査システム（LIS）からEHRへ連携され表示 |
+| **医用画像データ**                | PACS                            | DICOM画像の保管・配信専用         |
+| **処方・投薬情報**                | 電子カルテシステム（EHR）                  | オーダリング機能含む              |
+| **ログ情報（アクセス・操作ログ）**        | 電子カルテシステム<br>医事会計システム<br>PACS   | 各システムが個別に保持             |
