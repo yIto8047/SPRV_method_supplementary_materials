@@ -1,0 +1,73 @@
+﻿Scenario_ID,AttackTree_ID,Step,Step_num,Technique_ID,Technique_Name_J,Asset,Pi,DS_Total,DS_Selected,Maturity,Mi,Base_Risk,R_prev,Propagation_Term,Ri,Sector_Add,R_total
+Health-S1,1,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.095038109
+Health-S1,1,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.095038109
+Health-S1,1,S3,3,T1568.001,Fast Flux DNS,3.PACS ／ Picture Archiving and Communication System,0.54,2,2,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.095038109
+Health-S1,1,S4,4,T1529,System Shutdown/Reboot,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.9,3,3,1,0.1,0.09,0.055978992,1.055978992,0.095038109,0,0.095038109
+Health-S1,2,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.076030487
+Health-S1,2,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.076030487
+Health-S1,2,S3,3,T1568.001,Fast Flux DNS,3.PACS ／ Picture Archiving and Communication System,0.54,2,2,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.076030487
+Health-S1,2,S4,4,T1496.001,Compute Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.72,7,7,1,0.1,0.072,0.055978992,1.055978992,0.076030487,0,0.076030487
+Health-S1,3,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.057022866
+Health-S1,3,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.057022866
+Health-S1,3,S3,3,T1568.001,Fast Flux DNS,3.PACS ／ Picture Archiving and Communication System,0.54,2,2,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.057022866
+Health-S1,3,S4,4,T1531,Account Access Removal,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.54,3,3,1,0.1,0.054,0.055978992,1.055978992,0.057022866,0,0.057022866
+Health-S1,4,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.019007622
+Health-S1,4,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.019007622
+Health-S1,4,S3,3,T1568.001,Fast Flux DNS,3.PACS ／ Picture Archiving and Communication System,0.54,2,2,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.019007622
+Health-S1,4,S4,4,T1496,Resource Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,9,9,1,0.1,0.018,0.055978992,1.055978992,0.019007622,0,0.019007622
+Health-S1,5,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.019007622
+Health-S1,5,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.019007622
+Health-S1,5,S3,3,T1568.001,Fast Flux DNS,3.PACS ／ Picture Archiving and Communication System,0.54,2,2,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.019007622
+Health-S1,5,S4,4,T1496.004,Cloud Service Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,2,2,1,0.1,0.018,0.055978992,1.055978992,0.019007622,0,0.019007622
+Health-S1,6,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.019007622
+Health-S1,6,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.019007622
+Health-S1,6,S3,3,T1568.001,Fast Flux DNS,3.PACS ／ Picture Archiving and Communication System,0.54,2,2,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.019007622
+Health-S1,6,S4,4,T1496.002,Bandwidth Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,6,6,1,0.1,0.018,0.055978992,1.055978992,0.019007622,0,0.019007622
+Health-S1,7,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.095038109
+Health-S1,7,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.095038109
+Health-S1,7,S3,3,T1665,Hide Infrastructure,3.PACS ／ Picture Archiving and Communication System,0.54,4,4,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.095038109
+Health-S1,7,S4,4,T1529,System Shutdown/Reboot,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.9,3,3,1,0.1,0.09,0.055978992,1.055978992,0.095038109,0,0.095038109
+Health-S1,8,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.076030487
+Health-S1,8,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.076030487
+Health-S1,8,S3,3,T1665,Hide Infrastructure,3.PACS ／ Picture Archiving and Communication System,0.54,4,4,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.076030487
+Health-S1,8,S4,4,T1496.001,Compute Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.72,7,7,1,0.1,0.072,0.055978992,1.055978992,0.076030487,0,0.076030487
+Health-S1,9,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.057022866
+Health-S1,9,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.057022866
+Health-S1,9,S3,3,T1665,Hide Infrastructure,3.PACS ／ Picture Archiving and Communication System,0.54,4,4,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.057022866
+Health-S1,9,S4,4,T1531,Account Access Removal,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.54,3,3,1,0.1,0.054,0.055978992,1.055978992,0.057022866,0,0.057022866
+Health-S1,10,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.019007622
+Health-S1,10,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.019007622
+Health-S1,10,S3,3,T1665,Hide Infrastructure,3.PACS ／ Picture Archiving and Communication System,0.54,4,4,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.019007622
+Health-S1,10,S4,4,T1496,Resource Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,9,9,1,0.1,0.018,0.055978992,1.055978992,0.019007622,0,0.019007622
+Health-S1,11,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.019007622
+Health-S1,11,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.019007622
+Health-S1,11,S3,3,T1665,Hide Infrastructure,3.PACS ／ Picture Archiving and Communication System,0.54,4,4,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.019007622
+Health-S1,11,S4,4,T1496.004,Cloud Service Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,2,2,1,0.1,0.018,0.055978992,1.055978992,0.019007622,0,0.019007622
+Health-S1,12,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.019007622
+Health-S1,12,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.019007622
+Health-S1,12,S3,3,T1665,Hide Infrastructure,3.PACS ／ Picture Archiving and Communication System,0.54,4,4,1,0.1,0.054,0.036648,1.036648,0.055978992,0,0.019007622
+Health-S1,12,S4,4,T1496.002,Bandwidth Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,6,6,1,0.1,0.018,0.055978992,1.055978992,0.019007622,0,0.019007622
+Health-S1,13,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.09167937
+Health-S1,13,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.09167937
+Health-S1,13,S3,3,T1568.003,DNS Calculation,3.PACS ／ Picture Archiving and Communication System,0.18,1,1,1,0.1,0.018,0.036648,1.036648,0.018659664,0,0.09167937
+Health-S1,13,S4,4,T1529,System Shutdown/Reboot,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.9,3,3,1,0.1,0.09,0.018659664,1.018659664,0.09167937,0,0.09167937
+Health-S1,14,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.073343496
+Health-S1,14,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.073343496
+Health-S1,14,S3,3,T1568.003,DNS Calculation,3.PACS ／ Picture Archiving and Communication System,0.18,1,1,1,0.1,0.018,0.036648,1.036648,0.018659664,0,0.073343496
+Health-S1,14,S4,4,T1496.001,Compute Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.72,7,7,1,0.1,0.072,0.018659664,1.018659664,0.073343496,0,0.073343496
+Health-S1,15,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.055007622
+Health-S1,15,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.055007622
+Health-S1,15,S3,3,T1568.003,DNS Calculation,3.PACS ／ Picture Archiving and Communication System,0.18,1,1,1,0.1,0.018,0.036648,1.036648,0.018659664,0,0.055007622
+Health-S1,15,S4,4,T1531,Account Access Removal,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.54,3,3,1,0.1,0.054,0.018659664,1.018659664,0.055007622,0,0.055007622
+Health-S1,16,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.018335874
+Health-S1,16,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.018335874
+Health-S1,16,S3,3,T1568.003,DNS Calculation,3.PACS ／ Picture Archiving and Communication System,0.18,1,1,1,0.1,0.018,0.036648,1.036648,0.018659664,0,0.018335874
+Health-S1,16,S4,4,T1496,Resource Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,9,9,1,0.1,0.018,0.018659664,1.018659664,0.018335874,0,0.018335874
+Health-S1,17,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.018335874
+Health-S1,17,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.018335874
+Health-S1,17,S3,3,T1568.003,DNS Calculation,3.PACS ／ Picture Archiving and Communication System,0.18,1,1,1,0.1,0.018,0.036648,1.036648,0.018659664,0,0.018335874
+Health-S1,17,S4,4,T1496.004,Cloud Service Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,2,2,1,0.1,0.018,0.018659664,1.018659664,0.018335874,0,0.018335874
+Health-S1,18,S1,1,T1555.002,Securityd Memory,7.医療機器（ネットワーク接続型）／ Network-connected Medical Devices,0.18,2,2,1,0.1,0.018,0,1,0.018,0,0.018335874
+Health-S1,18,S2,2,T1059.012,Hypervisor CLI,4.認証・アクセス管理システム ／ Identity and Access Management (IAM) System,0.36,1,1,1,0.1,0.036,0.018,1.018,0.036648,0,0.018335874
+Health-S1,18,S3,3,T1568.003,DNS Calculation,3.PACS ／ Picture Archiving and Communication System,0.18,1,1,1,0.1,0.018,0.036648,1.036648,0.018659664,0,0.018335874
+Health-S1,18,S4,4,T1496.002,Bandwidth Hijacking,1.電子カルテシステム（EHR）／ Electronic Health Record System,0.18,6,6,1,0.1,0.018,0.018659664,1.018659664,0.018335874,0,0.018335874
