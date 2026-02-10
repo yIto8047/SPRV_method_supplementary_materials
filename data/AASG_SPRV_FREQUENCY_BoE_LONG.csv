@@ -1,0 +1,217 @@
+﻿Scenario_ID,AttackTree_ID,Step,Step_num,Technique_ID,Technique_Name_J,Asset,Pi,DS_Total,DS_Selected,Maturity,Mi,Base_Risk,R_prev,Propagation_Term,Ri,Sector_Add,R_total
+BoE-S1,1,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,1,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,1,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,1,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,2,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,2,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,2,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,2,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,3,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,3,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,3,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,3,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,4,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,4,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,4,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,4,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,5,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,5,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,5,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,5,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,6,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,6,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,6,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,6,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,7,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,7,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,7,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,7,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,8,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,8,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,8,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,8,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,9,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,9,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,9,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,9,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,10,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,10,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,10,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,10,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,11,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,11,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,11,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,11,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,12,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,12,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,12,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,12,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,13,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,13,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,13,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,13,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,14,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,14,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,14,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,14,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,15,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,15,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,15,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,15,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,16,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,16,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,16,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,16,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,17,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,17,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,17,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,17,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,18,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,18,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,18,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,18,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,19,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,19,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,19,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,19,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,20,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,20,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,20,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,20,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,21,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,21,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,21,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,21,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,22,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,22,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,22,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,22,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,23,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,23,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,23,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,23,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,24,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,24,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,24,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,24,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,25,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,25,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,25,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,25,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,26,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,26,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,26,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,26,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,27,S1,1,T1078,Valid Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,27,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,27,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,27,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,28,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,28,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,28,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,28,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,29,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,29,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,29,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,29,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,30,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,30,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,30,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,30,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,31,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,31,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,31,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,31,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,32,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,32,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,32,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,32,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,33,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,33,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,33,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,33,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,34,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,34,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,34,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,34,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,35,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,35,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,35,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,35,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,36,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,36,S2,2,T1014,Rootkit,"""AD OnPremise"",",0.9,3,3,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,36,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,36,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,37,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,37,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,37,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,37,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,38,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,38,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,38,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,38,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,39,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,39,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,39,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,39,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,40,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,40,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,40,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,40,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,41,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,41,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,41,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,41,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,42,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,42,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,42,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,42,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,43,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,43,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,43,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,43,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,44,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,44,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,44,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,44,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,45,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,45,S2,2,T1027,Obfuscated Files or Information,"""AD OnPremise"",",0.9,10,10,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,45,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,45,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,46,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,46,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,46,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,46,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,47,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,47,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,47,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,47,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,48,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,48,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,48,S3,3,T1053.005,Scheduled Task,Gakushu Server OnCloud,0.9,7,7,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,48,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,49,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,49,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,49,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,49,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,50,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,50,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,50,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,50,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,51,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,51,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,51,S3,3,T1068,Exploitation for Privilege Escalation,Gakushu Server OnCloud,0.9,2,2,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,51,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,52,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,52,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,52,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,52,S4,4,T1485,Data Destruction,"""Cloud Storage"",",0.9,10,10,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,53,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,53,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,53,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,53,S4,4,T1486,Data Encrypted for Impact,"""Cloud Storage"",",0.9,6,6,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
+BoE-S1,54,S1,1,T1078.002,Domain Accounts,Windows Surface for GIGA terminal,0.9,3,3,1,0.1,0.09,0,1,0.09,0,0.09889461
+BoE-S1,54,S2,2,T1027.001,Binary Padding,"""AD OnPremise"",",0.9,1,1,1,0.1,0.09,0.09,1.09,0.0981,0,0.09889461
+BoE-S1,54,S3,3,T1055.001,Dynamic-link Library Injection,Gakushu Server OnCloud,0.9,5,5,1,0.1,0.09,0.0981,1.0981,0.098829,0,0.09889461
+BoE-S1,54,S4,4,T1489,Service Stop,"""Cloud Storage"",",0.9,7,7,1,0.1,0.09,0.098829,1.098829,0.09889461,0,0.09889461
