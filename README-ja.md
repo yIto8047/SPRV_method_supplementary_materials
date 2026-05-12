@@ -9,6 +9,6 @@ for Cyber Attacks Based on the MITRE ATT&CK Using a Zero Trust Environment in Lo
 - リスク分析結果：IPA方式、SPRE方式
 等を提供します。
 
-
+各種分析データはdataフォルダに格納されています。
 
 
