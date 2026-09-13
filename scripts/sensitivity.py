@@ -20,4 +20,4 @@ for label,kw in [('β=0.05',dict(beta=0.05)),('β=0.10（基準）',dict()),('β
                  ('Ci 一段階下げ',dict(ci_shift=-1)),('Ci 既定（基準）',dict()),('Ci 一段階上げ',dict(ci_shift=+1))]:
     v={s:rsum(dfs[s],**kw) for s in 'ABCD'}
     rows.append(dict(条件=label,**{s:round(v[s],6) for s in 'ABCD'},順位=' > '.join(sorted('ABCD',key=lambda s:-v[s]))))
-T=pd.DataFrame(rows); print(T.to_string(index=False)); T.to_csv('sensitivity_beta_Ci.csv',index=False)
+T=pd.DataFrame(rows); print(T.to_string(index=False)); import os; os.makedirs('results',exist_ok=True); T.to_csv('results/sensitivity_beta_Ci.csv',index=False)
