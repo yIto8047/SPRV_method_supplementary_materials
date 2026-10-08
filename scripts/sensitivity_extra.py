@@ -5,7 +5,10 @@
    (1) P_i: 全ステップ・全シナリオを一律に ×0.95 / ×1.05
    (2) P_i: シナリオごとに独立に ±5%（隣接する順位の組ごとの最悪ケース。R_4 は P_i の 4 乗に比例）
    (3) C_i: 全ステップ・全シナリオの C_i に一律に −0.2 / −0.1 / +0.1 / +0.2 を加える
-   (4) P_i: Monte Carlo（シード 0、10,000 回、P_i に ×U(0.95,1.05) を掛ける）。(a) ステップごとに独立、(b) シナリオごとに独立（シナリオ内の全ステップは同率）"""
+   (4) P_i: Monte Carlo（シード 0、10,000 回、P_i に ×U(0.95,1.05) を掛ける）。P_i はテクニックの属性なので乱数はテクニック単位で与える。
+       (a) テクニックごとに独立（同一テクニックは全シナリオ・全攻撃ツリーで同じ倍率）… 論文 4.4.1 節の主記述
+       (b) テクニック×シナリオごとに独立（同一テクニックでもシナリオが異なれば別の倍率）
+       (c) シナリオごとに独立（シナリオ内の全ステップは同率）… 極端な条件（R_sum は P_i の 4 乗に比例）"""
 import pandas as pd
 D={s:pd.read_excel(f'../SPRV/SPRV_LG_LONG_scenario{s}.xlsx',sheet_name='LONG').sort_values(['AttackTree_ID','Step_num']).reset_index(drop=True) for s in 'ABCD'}
 def rsum(x,pk=1.0,dc=0.0):
@@ -29,13 +32,21 @@ for x in D.values(): assert (x.Step_num.values.reshape(-1,4)[:,3]==4).all()    #
 def rs_fast(x,f):
     q=np.minimum(1,x.Pi.values*f*x.Mi_Current.values*x.Ci.values); return q.reshape(-1,4).prod(axis=1).sum()
 rng=np.random.default_rng(0); N=10000; mc=[]
+techs=sorted(set().union(*[set(x.Technique_ID) for x in D.values()]))
 print('\nP_i Monte Carlo（×U(0.95,1.05)、10,000 回、シード 0）')
-for mode in ['(a) ステップごとに独立','(b) シナリオごとに独立（全ステップ同率）']:
-    cnt={}; bd=ca=0
+for mode in ['(a) テクニックごとに独立（全シナリオ共通）','(b) テクニック×シナリオごとに独立','(c) シナリオごとに独立（全ステップ同率）']:
+    cnt={}; bd=ac=0
     for _ in range(N):
-        v={s:rs_fast(D[s],rng.uniform(0.95,1.05,len(D[s])) if mode.startswith('(a)') else rng.uniform(0.95,1.05)) for s in D}
-        k=' > '.join(sorted(v,key=lambda t:-v[t])); cnt[k]=cnt.get(k,0)+1; bd+=v['D']>v['B']; ca+=v['A']>v['C']
+        if mode.startswith('(a)'):
+            f=dict(zip(techs,rng.uniform(0.95,1.05,len(techs)))); v={s:rs_fast(D[s],D[s].Technique_ID.map(f).values) for s in D}
+        elif mode.startswith('(b)'):
+            v={}
+            for s in D:
+                f=dict(zip(techs,rng.uniform(0.95,1.05,len(techs)))); v[s]=rs_fast(D[s],D[s].Technique_ID.map(f).values)
+        else:
+            v={s:rs_fast(D[s],rng.uniform(0.95,1.05)) for s in D}
+        k=' > '.join(sorted(v,key=lambda t:-v[t])); cnt[k]=cnt.get(k,0)+1; bd+=v['D']>v['B']; ac+=v['A']>v['C']
     for k,c in sorted(cnt.items(),key=lambda kv:-kv[1]): mc.append(dict(条件=mode,順位=k,割合=f'{c/N:.1%}'))
-    print(mode,{r['順位']:r['割合'] for r in mc if r['条件']==mode},f'| D>B {bd/N:.1%}, A>C {ca/N:.1%}')
+    print(mode,{r['順位']:r['割合'] for r in mc if r['条件']==mode},f'| D>B {bd/N:.1%}, A>C {ac/N:.1%}')
 pd.DataFrame(mc).to_csv('results/sensitivity_extra_montecarlo.csv',index=False,encoding='utf-8-sig')
 import os; os.makedirs('results',exist_ok=True); T.to_csv('results/sensitivity_extra.csv',index=False,encoding='utf-8-sig')
