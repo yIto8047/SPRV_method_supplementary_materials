@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""sprv_calc.py — SPRV の計算（論文 3.4 節、式 2〜4・9〜11）と図 7〜10 の再現
+"""sprv_calc.py — SPRV の計算（論文 3.4 節、式 3〜5・14〜16）と図 7〜10 の再現
 
 入力: SPRV/SPRV_LG_LONG_scenario{A,B,C,D}.xlsx の LONG シート
       （1 行 = 1 攻撃ツリーの 1 ステップ。必要列: Scenario_ID, AttackTree_ID, Step_num,
         Technique_ID, Asset, Pi, Mi_Current, Ci）
-      Mi_Current から d_i を逆算し、式 9 で三条件（遵守時 / 無対策 / 全対策）の M_i を作る。
+      Mi_Current から d_i を逆算し、式 14 で三条件（遵守時 / 無対策 / 全対策）の M_i を作る。
 
 計算:
-  Q_i    = P_i · M_i                              (式 2)
-  Q̂_i    = min(1, P_i · M_i · C_i)               (式 3)
-  R_i    = R_{i-1} · Q̂_i,  R_0 = 1               (式 4, 5)
-  R_tree = R_4                                     (式 11)
-  R_sum  = Σ_k R_tree,k                            (式 10)
+  Q_i    = P_i · M_i                              (式 3)
+  Q̂_i    = min(1, P_i · M_i · C_i)               (式 4)
+  R_i    = R_{i-1} · Q̂_i,  R_0 = 1               (式 5, 7)
+  R_tree = R_4                                     (式 16)
+  R_sum  = Σ_k R_tree,k                            (式 15)
   Risk 分類: LogRatio = (ln R_遵守 − ln R_全対策) / (ln R_無対策 − ln R_全対策)
              ≥ 2/3 → Risk A, ≥ 1/3 → Risk B, それ未満 → Risk C
 
@@ -29,10 +29,10 @@ import numpy as np, pandas as pd
 BETA, DMAX = 0.1, 5
 MI_WORST, MI_FULL = 0.9, 0.1
 RISK_B, RISK_A = 1 / 3, 2 / 3
-PAPER_RSUM = {"A": 0.007733, "B": 0.045477, "C": 0.017576, "D": 0.040929}
+PAPER_RSUM = {"A": 0.014060, "B": 0.045477, "C": 0.017576, "D": 0.040929}
 
-def M_of_d(d, beta=BETA): return beta + (1 - d / DMAX) * (1 - beta)          # 式 9
-def d_of_M(m, beta=BETA): return int(round(DMAX * (1 - (m - beta) / (1 - beta))))  # 式 9 の逆算
+def M_of_d(d, beta=BETA): return beta + (1 - d / DMAX) * (1 - beta)          # 式 14
+def d_of_M(m, beta=BETA): return int(round(DMAX * (1 - (m - beta) / (1 - beta))))  # 式 14 の逆算
 
 def load(indir):
     frames = []
@@ -50,13 +50,13 @@ def compute(df, beta=BETA):
     out = df[["Scenario_ID", "AttackTree_ID", "AttackTree_Key", "Step_num", "Technique_ID", "Asset", "Pi", "Ci"]].copy()
     out["di"] = df.Mi_Current.map(lambda m: d_of_M(m, BETA))
     out["Mi"] = out.di.map(lambda d: M_of_d(d, beta))
-    out["Qi"] = out.Pi * out.Mi                                             # 式 2
+    out["Qi"] = out.Pi * out.Mi                                             # 式 3
     for cond, mi in [("cur", out.Mi), ("worst", MI_WORST), ("full", MI_FULL)]:
-        q = (out.Pi * mi * out.Ci).clip(upper=1.0)                           # 式 3
+        q = (out.Pi * mi * out.Ci).clip(upper=1.0)                           # 式 4
         out[f"Qhat_{cond}"] = q
-        out[f"R_{cond}"] = q.groupby([out.Scenario_ID, out.AttackTree_ID]).cumprod()   # 式 4
+        out[f"R_{cond}"] = q.groupby([out.Scenario_ID, out.AttackTree_ID]).cumprod()   # 式 5
     trees = out[out.Step_num == out.Step_num.max()][["Scenario_ID", "AttackTree_ID", "AttackTree_Key", "R_cur", "R_worst", "R_full"]].copy()
-    trees.columns = ["Scenario_ID", "AttackTree_ID", "AttackTree_Key", "Rtree", "Rtree_worst", "Rtree_full"]      # 式 11
+    trees.columns = ["Scenario_ID", "AttackTree_ID", "AttackTree_Key", "Rtree", "Rtree_worst", "Rtree_full"]      # 式 16
     with np.errstate(divide="ignore", invalid="ignore"):
         lr = (np.log(trees.Rtree) - np.log(trees.Rtree_full)) / (np.log(trees.Rtree_worst) - np.log(trees.Rtree_full))
     trees["LogRatio"] = lr.fillna(0)
@@ -64,7 +64,7 @@ def compute(df, beta=BETA):
     summ = trees.groupby("Scenario_ID").agg(Rsum=("Rtree", "sum"),
                                             nA=("Risk_Class", lambda x: (x == "Risk A").sum()),
                                             nB=("Risk_Class", lambda x: (x == "Risk B").sum()),
-                                            nC=("Risk_Class", lambda x: (x == "Risk C").sum())).reset_index()   # 式 10
+                                            nC=("Risk_Class", lambda x: (x == "Risk C").sum())).reset_index()   # 式 15
     return out, trees, summ
 
 def check(df, out, trees):
