@@ -1,0 +1,8 @@
+﻿Asset,Asset_class,Ci,Scenarios,Steps
+DeskTop OnPremise,業務端末・一般端末,1.35,D,1
+Update server OnCloud,認証基盤・中間サーバ（VDI/Update）,1.5,AC,2
+VDI AuthServer,認証基盤・中間サーバ（VDI/Update）,1.5,BD,"1,2"
+VDI Server,認証基盤・中間サーバ（VDI/Update）,1.5,BD,3
+Business Server OnCloud,管理コンソール・クラウド基盤等の最重要資産（Proxy を含む）,2.0,ABCD,"3,4"
+Management Console for Business Server OnCloud,管理コンソール・クラウド基盤等の最重要資産（Proxy を含む）,2.0,AC,1
+Proxy server OnCloud,管理コンソール・クラウド基盤等の最重要資産（Proxy を含む）,2.0,AC,4

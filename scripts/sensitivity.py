@@ -10,7 +10,7 @@ def rsum(d,beta=0.1,ci_shift=0):
     ci=d.Ci if ci_shift==0 else d.Ci.map(DOWN if ci_shift<0 else UP)
     q=(d.Pi*d.di.map(lambda x:M(x,beta))*ci).clip(upper=1.0)     # 式4
     r=q.groupby(d.AttackTree_ID).cumprod()                        # 式5
-    return r[d.Step_num==4].sum()                                 # 式15
+    return r[d.Step_num==4].sum()                                 # 式16
 dfs={}
 for s in 'ABCD':
     d=pd.read_excel(f'../SPRV/SPRV_LG_LONG_scenario{s}.xlsx',sheet_name='LONG').sort_values(['AttackTree_ID','Step_num']).reset_index(drop=True)

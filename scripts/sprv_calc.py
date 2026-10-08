@@ -11,9 +11,9 @@
   Q_i    = P_i · M_i                              (式 3)
   Q̂_i    = min(1, P_i · M_i · C_i)               (式 4)
   R_i    = R_{i-1} · Q̂_i,  R_0 = 1               (式 5, 7)
-  R_tree = R_4                                     (式 16)
-  R_sum  = Σ_k R_tree,k                            (式 15)
-  Risk 分類: LogRatio = (ln R_遵守 − ln R_全対策) / (ln R_無対策 − ln R_全対策)
+  R_tree = R_4                                     (式 17)
+  R_sum  = Σ_k R_tree,k                            (式 16)
+  Risk 分類: LogRatio = (ln R_遵守 − ln R_全対策) / (ln R_無対策 − ln R_全対策)   (式 15)
              ≥ 2/3 → Risk A, ≥ 1/3 → Risk B, それ未満 → Risk C
 
 出力: out/sprv_long.csv（全ステップ）, out/sprv_trees.csv（ツリー単位）, out/sprv_summary.csv（R_sum と A/B/C 本数）
@@ -56,7 +56,7 @@ def compute(df, beta=BETA):
         out[f"Qhat_{cond}"] = q
         out[f"R_{cond}"] = q.groupby([out.Scenario_ID, out.AttackTree_ID]).cumprod()   # 式 5
     trees = out[out.Step_num == out.Step_num.max()][["Scenario_ID", "AttackTree_ID", "AttackTree_Key", "R_cur", "R_worst", "R_full"]].copy()
-    trees.columns = ["Scenario_ID", "AttackTree_ID", "AttackTree_Key", "Rtree", "Rtree_worst", "Rtree_full"]      # 式 16
+    trees.columns = ["Scenario_ID", "AttackTree_ID", "AttackTree_Key", "Rtree", "Rtree_worst", "Rtree_full"]      # 式 17
     with np.errstate(divide="ignore", invalid="ignore"):
         lr = (np.log(trees.Rtree) - np.log(trees.Rtree_full)) / (np.log(trees.Rtree_worst) - np.log(trees.Rtree_full))
     trees["LogRatio"] = lr.fillna(0)
@@ -64,7 +64,7 @@ def compute(df, beta=BETA):
     summ = trees.groupby("Scenario_ID").agg(Rsum=("Rtree", "sum"),
                                             nA=("Risk_Class", lambda x: (x == "Risk A").sum()),
                                             nB=("Risk_Class", lambda x: (x == "Risk B").sum()),
-                                            nC=("Risk_Class", lambda x: (x == "Risk C").sum())).reset_index()   # 式 15
+                                            nC=("Risk_Class", lambda x: (x == "Risk C").sum())).reset_index()   # 式 16
     return out, trees, summ
 
 def check(df, out, trees):

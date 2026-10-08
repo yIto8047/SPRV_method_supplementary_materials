@@ -13,7 +13,8 @@ Supplementary materials for: *Proposal and Evaluation of a Stepwise Propagated R
 | `Pi_scoring_MITRE_v17.1_frequency_BIN.csv` | MITRE ATT&CK Enterprise v17.1 の全 679 テクニックについて、攻撃グループ・キャンペーン・ソフトウェアからの参照回数（G_k, C_k, S_k）、総観測頻度 F_k、相対比率、BIN レベル（1〜5） | 3.4.1 節、式 (9)〜(12)、表 1、4.2.1 節（図 5） |
 | `MITRE_dictionary_J_ver3.csv` | MITRE ATT&CK Enterprise v17.1 のテクニック辞書（823 件）。技術名の日本語訳、戦術、プラットフォーム、対象資産候補、攻撃ステップ（S1〜S4）への分類 | 4.1.1 節（表 6 のテクニック選定）、図 6 |
 | `asset_list_LG.txt` | 攻撃進展構造の自動生成に入力する資産定義（自治体ゼロトラスト・ハイブリッド環境） | 図 4 |
-| `SPRV/SPRV_LG_LONG_scenario{A,B,C,D}.xlsx` | SPRV 方式の計算シート（シナリオ A〜D、各 64 攻撃ツリー × 4 ステップ） | 式 (3)〜(5)、(12)、(14)〜(16)、図 7（SPRV 側）、図 8、図 9、図 10 |
+| `SPRV/SPRV_LG_LONG_scenario{A,B,C,D}.xlsx` | SPRV 方式の計算シート（シナリオ A〜D、各 64 攻撃ツリー × 4 ステップ） | 式 (3)〜(5)、(12)、(14)〜(17)、図 7（SPRV 側）、図 8、図 9、図 10 |
+| `SPRV/Ci_asset_class.csv` | 標的資産 → 資産クラス → C_i の対応表（4 シナリオの全 20 資産種別分。LONG シートの `Ci` 列はこの表に従う） | 表 3 |
 | `IPA/Scenario{A,B,C,D}_IPA_scenario_threat_fixed.xlsx` | IPA 方式の計算シート（攻撃ツリー単位の事業被害・脅威・対策・脆弱性とリスク値） | 表 8、図 7（IPA 側） |
 | `di_no_mitigation/scenario_no_mitigation_analysis.xlsx` | MITRE の Mitigation が定義されていないテクニックの抽出と、Detection 記述からの統制目標の導出 | 3.4.2 節（表 2）、4.1.2 節（表 7） |
 | `di_no_mitigation/final_result_with_digital_and_pages.xlsx` | 導出した統制目標と、総務省ガイドライン・デジタル庁規定の該当箇所（ページ付き）の照合結果 | 同上 |
@@ -58,7 +59,7 @@ BIN レベルの境界は総観測頻度 F_k を 2 の冪で区切る対数ビ�
 
 **F_k = 0 のサブテクニックの扱い（論文 3.4.1 節、式 (11) の例外）**: 攻撃ツリーの構成上必要となるサブテクニックのうち観測頻度が 0 のもの（本研究では T1496.002、T1496.004、T1578.004）は、親テクニック（T1496、T1578）に観測実績があることから、最小の Level 1（P_i = 0.18）を与えている。`Pi_scoring_MITRE_v17.1_frequency_BIN.csv` ではこの 3 件の `Freq_BinScore` は 0 のままであり、`SPRV/SPRV_LG_LONG_scenario*.xlsx` の `Pi` 列（0.18）がこの例外を適用した値である。4 シナリオでこの 3 件はすべて使用されている（Step 2: T1578.004、Step 4: T1496.002・T1496.004）。
 
-### 2.2 `SPRV/SPRV_LG_LONG_scenario*.xlsx`（式 3〜5、12、14〜16）
+### 2.2 `SPRV/SPRV_LG_LONG_scenario*.xlsx`（式 3〜5、12、14〜17）
 
 `LONG` シート（1 行 = 1 攻撃ツリーの 1 ステップ、64 × 4 = 256 行）
 
@@ -70,16 +71,16 @@ BIN レベルの境界は総観測頻度 F_k を 2 の冪で区切る対数ビ�
 | `Pi` | P_i | 攻撃再現性率（式 12） |
 | `Mi_Current` | M_i | ガイドライン遵守時の防御失敗率（式 14、β = 0.1） |
 | `Mi_Worst`, `Mi_Full` | — | 無対策時（0.9）、全対策実施時（0.1）の M_i |
-| `Ci` | C_i | 補正係数（表 3・表 4。`Settings` シートの変換表で資産種別から割当） |
+| `Ci` | C_i | 補正係数（表 4 の 5 段階のうち、標的資産の資産クラスにより表 3 で一意に割当。資産と C_i の対応は `SPRV/Ci_asset_class.csv`） |
 | `Qhat_i_Current` | Q̂_i = min(1, P_i · M_i · C_i) | 実効ステップ毎攻撃成功率（式 4） |
 | `Ri_Current` | R_i = R_{i−1} · Q̂_i | 攻撃経路到達率（式 5）。図 9・10 の青線 |
 | `Ri_Worst`, `Ri_Full` | — | 無対策時・全対策時の R_i。図 9・10 の赤線・緑線 |
-| `Rtree_Current` | R_tree = R_4 | 最終ステップの到達率（式 16） |
+| `Rtree_Current` | R_tree = R_4 | 最終ステップの到達率（式 17） |
 | `Risk_Class` | — | R_tree の相対危険度（A/B/C）。図 7 |
 
-`Tree_Summary` シート: ツリー単位の R_tree と Risk_Class。`Risk_Summary` シート: R_sum（式 15）と A/B/C の本数。`Settings` シート: 式と C_i の変換表。
+`Tree_Summary` シート: ツリー単位の R_tree と Risk_Class。`Risk_Summary` シート: R_sum（式 16）と A/B/C の本数。`Settings` シート: 計算式、Risk 分類のしきい値（LogRatio、式 15）、C_i の 5 段階（影響度レベル）の表（論文の表 4）。資産クラスと C_i の対応（論文の表 3）は `SPRV/Ci_asset_class.csv` にまとめた。
 
-Risk 分類（図 7）は、ガイドライン遵守時・無対策時（M_i = 0.9）・全対策時（M_i = 0.1）の R_tree を用いて
+Risk 分類（図 7）は、ガイドライン遵守時・無対策時（M_i = 0.9）・全対策時（M_i = 0.1）の R_tree を用いて（式 15）
 
   LogRatio = (ln R_tree,遵守 − ln R_tree,全対策) / (ln R_tree,無対策 − ln R_tree,全対策)
 
@@ -182,7 +183,8 @@ P_i はテクニックの属性（式 (12)）であるため、Monte Carlo の�
 **2026 年 10 月 8 日 — P_i の Monte Carlo 感度分析の変動単位の修正**
 
 - 旧版の `scripts/sensitivity_extra.py` の Monte Carlo (a) は、攻撃ツリー×ステップの行ごとに独立な倍率を掛けており、同一シナリオ内の同一テクニックが攻撃ツリーごとに別の値に動く計算になっていた（64 本で平均化されるため過度に安定した結果となる）。P_i はテクニックの属性であるため、乱数をテクニック単位で与えるよう修正した：(a) テクニックごとに独立（全シナリオ共通）→ 順位不変 100%、(b) テクニック×シナリオごとに独立 → B と D の反転 3.6%、(c) シナリオごとに独立（全ステップ同率）→ 従来どおり。論文 4.4.1 節の記述もこれに合わせて改めた。
-- 表 3 の C_i と資産クラスの対応について、Proxy Server（Proxy server OnCloud）は本データでは最終侵害ステップ S4 にのみ現れ（シナリオ A・C の各 64 本）、C_i は常に 2.0 である。論文の表 3 では Proxy を最重要資産（C_i = 2.0）の行のみに記載するよう改めた（データの変更はない）。
+- 式番号を修正稿（LogRatio の定義式を式 (15) として追加し、R_sum が式 (16)、R_tree が式 (17)）に合わせ、README とスクリプトのコメントを更新した。
+- 表 3 の C_i と資産クラスの対応について、Proxy Server（Proxy server OnCloud）は本データでは最終侵害ステップ S4 にのみ現れ（シナリオ A・C の各 64 本）、C_i は常に 2.0 である。論文の表 3 では Proxy を最重要資産（C_i = 2.0）の行のみに記載するよう改めた（データの変更はない）。 資産 → 資産クラス → C_i の対応表を `SPRV/Ci_asset_class.csv` として追加した（`Settings` シートにあるのは C_i の 5 段階表のみ）。
 
 ## 6. 引用
 
